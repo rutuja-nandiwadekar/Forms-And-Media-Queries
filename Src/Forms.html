@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("/Assets/background.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .container {
+            padding: 50px;
+            background-color: rgb(234, 143, 52);
+            margin-left: 32%;
+            height: 30%;
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-img">
+        <form class="container">
+            <h1>Login</h1>
+
+            <div>
+                <label for="fName">FirstName</label>
+                <input type="text" id="fname" required>
+            </div>
+            <div>
+                <label for="lName">LastName</label>
+                <input type="text" id="lname" required>
+            </div>
+            <div>
+                <label for="uName">UserName</label>
+                <input type="text" id="uname" required>
+            </div>
+            <div>
+                <label for="password">CreatePassword</label>
+                <input type="password" id="createPassword" required>
+            </div>
+            <div>
+                <label for="password">ConfirmPassword</label>
+                <input type="password" id="confirmPassword" required>
+            </div>
+
+            <div>
+                <label for="gender">SelectGender</label>
+                <input type="radio" name="gender" id="male" checked><label for="male">Male</label>
+                <input type="radio" name="gender" id="female"><label for="female">Female</label>
+            </div>
+            <div>
+                <label for="degree">SelectDegree</label>
+                <input type="checkbox" name="degree" id="MCA"><label>MCA</label>
+                <input type="checkbox" name="degree" id="BEIT"><label>BEIT</label>
+            </div>
+
+            <div>
+                <label for="address">Address</label>
+                <textarea name="address" id="address" cols="30" rows="10"></textarea>
+            </div>
+
+            <div>
+                <label for="city">SelectCity</label>
+                <select>
+                    <option value="city">ratnagiri</option>
+                    <option value="city">kolhapur</option>
+                </select>
+            </div>
+
+            <input type="submit" id="submit">
+            <input type="reset" name="reset" id="reset">
+        </form>
+    </div>
+
+
+    <script>
+        function onSubmit() {
+            alert(" form Submitted")
+        }
+        let button = document.getElementById("submit")
+        button.addEventListener("click", onSubmit)
+        let firstName;
+        function getFirstName() {
+            // alert(this.value)
+            firstName = this.value
+            console.log(firstName)
+        }
+        let firstNameId = document.getElementById("firstName")
+        firstNameId.addEventListener("change", getFirstName)
+
+
+        let lastName;
+        function getLastName() {
+            lastName = this.value
+            console.log(lastName)
+        }
+        let lastNameId = document.getElementById("lastName")
+        lastNameId.addEventListener("change", getLastName)
+
+        firstNameId.removeEventListener()
+        lastNameId.removeEventListener()
+
+    </script>
+</body>
+
+</html>

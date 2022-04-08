@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(/Assets/triagles.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .container input[type=text], input[type=password] {
+            width: 100%;
+            padding: 15px 15px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: 50px;
+            background-color: rgb(22, 174, 174);
+            margin-left: 32%;
+            height: 30%;
+            width: 30%;
+        }
+
+        button {
+            background-color: rgb(48, 39, 67);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 15%;
+            display: flex;
+            justify-content: center;
+        }
+
+        hr {
+            border: 1px solid white;
+            margin-bottom: 25px;
+        }
+
+        #login {
+            display: none;
+            padding-top: 50px;
+        }
+
+        #reg {
+            display: none;
+            padding-top: 50px;
+        }
+
+        h2 {
+            color: rgb(26, 26, 31);
+            font: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h2>Click on the Register button to open the Registration form</h2>
+    </center>
+    <center><button onclick="document.getElementById('reg').style.display='block'">Register</button></center>
+    <center>
+        <h2>Click on the Login button to open the login form</h2>
+    </center>
+    <center><button onclick="document.getElementById('login').style.display='block'">Login</button></center>
+
+
+    <div id="reg">
+        <form>
+
+            <div class="container">
+                <center>
+                    <h1> Registration Form</h1>
+                </center>
+                <hr>
+                <div>
+                    <label for="fName">FirstName</label>
+                    <input type="text" id="fname" required>
+                </div>
+                <div>
+                    <label for="lName">LastName</label>
+                    <input type="text" id="lname" required>
+                </div>
+                <div>
+                    <label for="uName">UserName</label>
+                    <input type="text" id="uname" required>
+                </div>
+                <div>
+                    <label for="password">CreatePassword</label>
+                    <input type="password" id="createPassword" required>
+                </div>
+                <div>
+                    <label for="password">ConfirmPassword</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+
+                <button type="submit" id="submit">Register</button>
+
+            </div>
+        </form>
+    </div>
+
+    <div id="login">
+        <form>
+
+            <div class="container">
+                <center>
+                    <h1> Login Form</h1>
+                </center>
+                <hr>
+                <div>
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" id="uname" required>
+                </div>
+                <div>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" id="psw" required>
+                </div>
+                <button type="submit" id="submit1">Login</button>
+
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function onSubmit() {
+            alert("Submitted successfully!!!")
+        }
+        let button = document.getElementById("submit")
+        button.addEventListener("click", onSubmit)
+
+        function onSubmit1() {
+            alert("Logged in successfully!!!")
+        }
+        let button1 = document.getElementById("submit1")
+        button1.addEventListener("click", onSubmit)
+    </script>
+
+</body>
+</html>
