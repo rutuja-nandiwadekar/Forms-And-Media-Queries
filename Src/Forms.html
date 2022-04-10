@@ -5,10 +5,19 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-image: url("/Assets/background.jpg");
+            background-image: url("/Forms/Assets/background.jpg");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
+        }
+
+        h2 {
+            font-size: 60px;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+            color: blue;
+            text-shadow: 3px 3px 3px black;
         }
 
         .container {
@@ -27,45 +36,51 @@
     <div>
         <form class="container">
             <center>
-                <h2>Fomr</h2>
+                <h2>Form</h2>
             </center>
             <div>
                 <label for="fName">FirstName</label>
                 <input type="text" id="fname" required>
             </div>
+            <br>
             <div>
                 <label for="lName">LastName</label>
                 <input type="text" id="lname" required>
             </div>
+            <br>
             <div>
                 <label for="uName">UserName</label>
                 <input type="text" id="uname" required>
             </div>
+            <br>
             <div>
                 <label for="password">CreatePassword</label>
                 <input type="password" id="createPassword" required>
             </div>
+            <br>
             <div>
                 <label for="password">ConfirmPassword</label>
                 <input type="password" id="confirmPassword" required>
             </div>
+            <br>
 
             <div>
                 <label for="gender">SelectGender</label>
                 <input type="radio" name="gender" id="male" checked><label for="male">Male</label>
                 <input type="radio" name="gender" id="female"><label for="female">Female</label>
             </div>
+            <br>
             <div>
                 <label for="degree">SelectDegree</label>
                 <input type="checkbox" name="degree" id="MCA"><label>MCA</label>
                 <input type="checkbox" name="degree" id="BEIT"><label>BEIT</label>
             </div>
-
+            <br>
             <div>
                 <label for="address">Address</label>
                 <textarea name="address" id="address" cols="30" rows="10"></textarea>
             </div>
-
+            <br>
             <div>
                 <label for="city">SelectCity</label>
                 <select>
